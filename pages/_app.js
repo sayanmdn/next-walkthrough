@@ -4,7 +4,6 @@ import Link from 'next/link'
 
 export default function FirstPost() {
   return (
-    <div>
       <div className='p-8 justify-center items-center h-screen flex'>
         <form className='flex'>
           <input className='bg-gray-200 shadow-inner rounded-l p-2 flex-1' id='email' type='email' aria-label='email address' placeholder='Enter your email address' />
@@ -13,6 +12,5 @@ export default function FirstPost() {
         </button>
         </form>
       </div>
-    </div>
   )
 }
