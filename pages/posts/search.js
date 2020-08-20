@@ -1,34 +1,14 @@
-import {useState} from 'react'
-import {useRouter} from 'next/router'
-
-const preventDefault = f => e => {
-  e.preventDefault()
-  f(e)
+const Home = () => {
+    return (
+        <div className='p-8 justify-center items-center h-screen flex'>
+            <form className='flex'>
+                <input className='bg-gray-200 shadow-inner rounded-l p-2 flex-1' id='email' type='email' aria-label='email address' placeholder='Enter your email address' />
+                <button className='bg-blue-600 hover:bg-blue-700 duration-300 text-white shadow p-2 rounded-r' type='submit'>
+                    Sign Up
+          </button>
+            </form>
+        </div>
+    )
 }
 
-export default ({action = '/search'}) => {
-   const router = useRouter()
-   const [query, setQuery] = useState('')
-
-   const handleParam = setValue => e => setValue(e.target.value)
-
-   const handleSubmit = preventDefault(() => {
-     router.push({
-       pathname: action,
-       query: {q: query},
-     })
-   })
-
-   return (
-     <form onSubmit={handleSubmit}>
-       <input
-         type='text'
-         name='q'
-         value={query}
-         onChange={handleParam(setQuery)}
-         placeholder='Search'
-         aria-label='Search'
-       />
-     </form>
-   )
-}
+export default Home
