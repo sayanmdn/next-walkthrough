@@ -15,7 +15,7 @@ export default function Home() {
           (This is a sample website - I'm building with help of{' '}
           <a href="https://nextjs.org/learn">Next.js Docs</a>.)
         </p>
-        <p><Link href='/posts/first-post' > Go to first post</Link></p>
+        <p><Link href='/posts/first-post' > Go to first post!</Link></p>
       </section>
     </Layout>
   )
